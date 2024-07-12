@@ -1,13 +1,7 @@
-#TA評分 8/10
-'''架構完整，註解勉強尚可，然而程式仍有些許不正確，例如視角規格並非簡報裡所指定，---(line 67 附近已有指定unit為degree?)
-反應時間應為 probe 階段的 2 秒內，超過 2 秒即不再收集反應按鍵。---(已修正)
-建議 trials 數的變數應用更有彈性的寫法，例如使用 len 函數。---(是為了測試方便，line 163 已加註解)'''
-
-from psychopy import visual,event,core,monitors,tools, gui
-import numpy as np
 import pandas as pd
+import numpy as np
 import random
-#-------some functions written for this mid-term project--------#
+from psychopy import visual,event,core,monitors,tools, gui
 
 def en_pr(win, record, current_t_index, pORe):
 #"record"---> A 9*40 array. See the function "add" in line 78.#"pORe"--->A string to assign to do encoding or probe. See line 37.
@@ -253,13 +247,3 @@ save(subID, record, rkey, rt, crt)
 win.close()
 core.quit()
 
-#Ref:
-
-#random.randint:
-#https://docs.python.org/3/library/random.html
-
-#wxpython
-#https://www.wxpython.org/pages/downloads/
-
-#psychopy.gui
-#https://www.psychopy.org/api/gui.html
